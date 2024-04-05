@@ -97,7 +97,7 @@ form, .thank{
 h1{
     font-size: 2em;
     text-transform: uppercase;
-    letter-spacing: .2rem;
+    letter-spacing: .1rem;
     color: var(--very-dark-violet);
     margin: 1rem 0 0;
 }
