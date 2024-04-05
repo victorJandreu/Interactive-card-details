@@ -37,7 +37,7 @@ body{
 .grid{
     display: grid;
     grid-template-columns: 5% 50px minmax(200px, 300px) 50px 1fr;
-    grid-template-rows: 2rem 100px 20px 90px 50px 50px 50px;
+    grid-template-rows: 2rem 100px 20px 90px 70px 50px 50px;
     width: 100%;
 }
 
