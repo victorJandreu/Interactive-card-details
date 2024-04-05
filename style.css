@@ -1,0 +1,258 @@
+
+
+:root{
+    --gradiant: hsl(249, 99%, 64%), hsl(278, 94%, 30%);
+    --red-error: hsl(0, 100%, 66%);
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-violet: hsl(270, 3%, 87%);
+    --dark-grayish-violet: hsl(279, 6%, 55%);
+    --very-dark-violet: hsl(278, 68%, 11%);
+}
+
+
+*{
+    box-sizing: border-box;
+    font-weight: 500;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-size: 18px;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+
+/* div, container... */
+.frontCard, .backCard{
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+    /* sub part: grid part   */
+
+.grid{
+    display: grid;
+    grid-template-columns: 5% 50px minmax(200px, 300px) 50px 1fr;
+    grid-template-rows: 2rem 100px 20px 90px 50px 50px 50px;
+    width: 100%;
+}
+
+.frontCard{
+    background-image: url("./images/bg-card-front.png");
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    grid-column: 2 / 4;
+    grid-row: 4 / 7;
+    z-index: 4;
+    box-shadow: 0px 30px 20px var(--light-grayish-violet);
+    
+}
+
+.backCard{
+    background-image: url("./images/bg-card-back.png");
+    grid-column: 3 / 5;
+    grid-row: 2 / 5;
+    background-position: center;
+    position: relative;
+    z-index: 2;
+}
+
+.background{
+    background-image: url("./images/bg-main-mobile.png");
+    grid-column: 1 / -1;
+    grid-row: 1 / 6;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+    /* subpart: grid part finish   */
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    gap: 3px;
+}
+
+
+form, .thank{
+    margin: 0 auto;
+    width: 90%;
+}
+
+.thank{
+    display: none;
+    text-align: center;
+}
+
+/* h1, h2, p...  */
+
+h1{
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    color: var(--very-dark-violet);
+    margin: 1rem 0 0;
+}
+
+
+
+ section .flex p{
+    margin-bottom: 0;
+    color: var(--light-grayish-violet);
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-size: .85em;
+}
+
+#cardNumber {
+    margin-bottom: .6rem;
+    color: var(--white);
+    letter-spacing: .2rem;
+    
+}
+
+.nombre, .date{
+    margin-top: 0.3rem;
+}
+
+.cvc{
+    position: absolute;
+    color: var(--white);
+    letter-spacing: .1rem;
+    right: 33px;
+    top: 75px;
+}
+
+.thank p {
+    color: var(--dark-grayish-violet);
+}
+
+/* label, input button  */
+
+input::placeholder, button{
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1em;
+    
+}
+
+label{
+    display: block;
+    text-transform: uppercase;
+    font-size: .8em;
+    letter-spacing: .1rem;
+    color: var(--very-dark-violet);
+    font-weight: 600;
+    margin: 1.4rem 0 .5rem;
+}
+
+input{
+    padding: .8rem;
+    border-radius: 10px;
+    border: 2px solid var(--light-grayish-violet);
+    color: var(--very-dark-violet);
+    font-weight: 700;
+    font-size: 1em;
+}
+
+input:hover{
+    cursor: pointer;
+    border: 2px solid var(--very-dark-violet);
+}
+
+
+input::placeholder{
+    opacity: .5;
+    color: var(--dark-grayish-violet);
+}
+
+#name, #number{
+    width: 100%;
+}
+
+#month, #year{
+    width: 47%;
+}
+
+.cvcDiv, #cvc{
+    width: 100%;
+}
+
+
+button{
+    width: 100%;
+    padding: 0.8rem;
+    margin: 1.3rem 0;
+    background-color: var(--very-dark-violet);
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: hsl(249, 99%, 64%);
+}
+
+.advert{
+    color: var(--red-error);
+    margin-top: .3rem;
+    margin-bottom: 0;
+    font-size: .8rem;
+}
+
+.borde:focus{
+    outline: 2px solid var(--red-error);
+}
+
+
+
+@media (min-width: 800px) {
+    body{
+        display: flex;
+        min-height: 100vh;
+        align-items: center;
+       
+    }
+
+    .grid{
+        width: 60%;
+        grid-template-columns: 1fr 50px 50px 220px 100px 50px 50px 1fr;
+        grid-template-rows: .8fr 110px 100px 50px 210px 50px 1fr;
+        min-height: 100vh;
+    }
+    .frontCard{
+        grid-column: 3 / 6;
+        grid-row: 2 / 4;
+    }
+
+    .backCard{
+      grid-column: 4 / 7;
+      grid-row: 5 / 6;
+     }
+     .background{
+        grid-column: 1 / 5;
+        grid-row: 1 / -1;
+    }
+
+     form{
+        max-width: 400px;
+        width: 80%;
+     }
+     .thank{
+        max-width: 450px;
+     }
+     .total{
+        width: 50%;
+     }
+
+}
+
