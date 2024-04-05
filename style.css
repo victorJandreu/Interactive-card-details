@@ -113,6 +113,8 @@ h1{
 }
 
 #cardNumber {
+    font-size: .9em;
+    margin-top: 0;
     margin-bottom: .6rem;
     color: var(--white);
     letter-spacing: .2rem;
